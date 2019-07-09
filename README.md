@@ -113,7 +113,7 @@ mage.setHairColor(HairColor.BLACK);
 mage.setWeapon(Weapon.DAGGER);
 ```
 
-1. The class we are instantiating can not be instantiated **without** these values.
+1. Depending on the class, it may not be able to be instantiated by an **empty** constructor.
 2. Forces the developer to know all the details of the object they are creating before instantiation.
 3. Developers can easily follow this logic because the Builder design pattern is standard among software development.
 
