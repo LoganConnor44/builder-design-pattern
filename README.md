@@ -94,7 +94,7 @@ Hero mage = new Hero.Builder(Profession.MAGE, "Riobard")
 
 ## Run This Project
 ```bash
-java -cp target/builder-design-pattern-1.0-SNAPSHOT.jar com.loganconnor44.App
+java -jar target/builder-design-pattern-1.0-SNAPSHOT.jar
 ```
 
 
