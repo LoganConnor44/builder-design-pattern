@@ -97,28 +97,20 @@ Hero mage = new Hero.Builder(Profession.MAGE, "Riobard")
 ### Using The Object's Setter Methods
 
 ```java
-public class App {
-    public static void main(String[] args) {
-        Hero mage = new Hero.Builder(Profession.MAGE, "Riobard")
-            .withHairColor(HairColor.BLACK)
-            .withWeapon(Weapon.DAGGER)
-            .build();
-    }
-}
+Hero mage = new Hero.Builder(Profession.MAGE, "Riobard")
+    .withHairColor(HairColor.BLACK)
+    .withWeapon(Weapon.DAGGER)
+    .build();
 ```
 
 Sure does look a whole lot like:
 
 ```java
-public class App {
-    public static void main(String[] args) {
-        Hero mage = new Hero();
-        mage.setProfession(Profession.MAGE);
-        mage.setProfession("Riobard");
-        mage.setHairColor(HairColor.BLACK);
-        mage.setWeapon(Weapon.DAGGER);
-    }
-}
+Hero mage = new Hero();
+mage.setProfession(Profession.MAGE);
+mage.setProfession("Riobard");
+mage.setHairColor(HairColor.BLACK);
+mage.setWeapon(Weapon.DAGGER);
 ```
 
 1. The class we are instantiating can not be instantiated **without** these values.
