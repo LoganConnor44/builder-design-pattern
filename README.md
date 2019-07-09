@@ -112,7 +112,7 @@ Telescoping Constructors is an anti-pattern where a class has multiple construct
 
 The main issue with this anti-pattern is **maintainability**.
 
-If there are only a few fields in the class then is anti-pattern isn't a huge problem, but the issue begins when a class has more than two or three fields. Telescoping Constructors can be difficult to read as they may contain a large number of fields. When instantiating this class developers may pass an incorrect argument.
+If there are only a few fields in the class then is anti-pattern isn't a huge problem, but the issue begins when a class has more than two or three fields. Although keep in mind, a class with eight properties will result in 254 different constructors for every different possible combination of fields that may be instantiated at one time.
 
 #### What Does This Look Like In Code?
 
