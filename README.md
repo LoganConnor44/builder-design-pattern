@@ -1,8 +1,10 @@
-# What Problem Does This Pattern Solve?
+# Builder Design Pattern
+
+## What Problem Does This Pattern Solve?
 
 The problem that a developer can encounter is when he/she is attempting to create an object but needs to define different representations of the object. Often, a developer may create a constructor for every possible combination of an object. This is known as [Telescoping Constructors](#Telescoping-Constructors) and is a defined anti-pattern.
 
-# How Can I Identify An Appropriate Time To Use This Pattern?
+## How Can I Identify An Appropriate Time To Use This Pattern?
 
 This is usually identified by a class with [Telescoping Constructors](#Telescoping-Constructors).
 
@@ -18,7 +20,7 @@ public class Hero {
 }
 ```
 
-### What Does This Look Like In Code?
+## What Does This Look Like In Code?
 
 ```java
 public final class Hero {
@@ -90,7 +92,7 @@ Hero mage = new Hero.Builder(Profession.MAGE, "Riobard")
     .build();
 ```
 
-# Run This Project
+## Run This Project
 ```bash
 java -cp target/builder-design-pattern-1.0-SNAPSHOT.jar com.loganconnor44.App
 ```
@@ -98,21 +100,21 @@ java -cp target/builder-design-pattern-1.0-SNAPSHOT.jar com.loganconnor44.App
 
 
 
-# Annotations
+## Annotations
 
-## Telescoping Constructors
+### Telescoping Constructors
 
-### What Are Telescoping Constructors?
+#### What Are Telescoping Constructors?
 
 Telescoping Constructors is an anti-pattern where a class has multiple constructors where each constructor calls a more specific constructor in the hierarchy. Each constructor will contain more class fields than the previous constructor. This will continue until there are no more fields remaining in the class.
 
-### What Problem Does This Anti-Pattern Introduce?
+#### What Problem Does This Anti-Pattern Introduce?
 
 The main issue with this anti-pattern is **maintainability**.
 
 If there are only a few fields in the class then is anti-pattern isn't a huge problem, but the issue begins when a class has more than two or three fields. Telescoping Constructors can be difficult to read as they may contain a large number of fields. When instantiating this class developers may pass an incorrect argument.
 
-### What Does This Look Like In Code?
+#### What Does This Look Like In Code?
 
 ```java
 public class Person {
