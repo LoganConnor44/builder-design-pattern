@@ -119,6 +119,10 @@ mage.setWeapon(Weapon.DAGGER);
 
 ### Creating A Factory Method Design Pattern
 
+## What Are Some Disadvantages To This Design Pattern?
+
+The lines of code that a developer needs to write is essentially doubled. The target class is written and an almost double is written for the target class's builder.
+
 ## Run This Project
 ```bash
 java -jar target/builder-design-pattern-1.0-SNAPSHOT.jar
