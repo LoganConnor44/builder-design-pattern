@@ -92,6 +92,33 @@ Hero mage = new Hero.Builder(Profession.MAGE, "Riobard")
     .build();
 ```
 
+## How Is This Better Than...
+
+### Using The Object's Setter Methods
+
+```java
+Hero mage = new Hero.Builder(Profession.MAGE, "Riobard")
+    .withHairColor(HairColor.BLACK)
+    .withWeapon(Weapon.DAGGER)
+    .build();
+```
+
+Sure does look a whole lot like:
+
+```java
+Hero mage = new Hero();
+mage.setProfession(Profession.MAGE);
+mage.setProfession("Riobard");
+mage.setHairColor(HairColor.BLACK);
+mage.setWeapon(Weapon.DAGGER);
+```
+
+1. The class we are instantiating can not be instantiated **without** these values.
+2. Forces the developer to know all the details of the object they are creating before instantiation.
+3. Developers can easily follow this logic because the Builder design pattern is standard among software development.
+
+### Creating A Factory Method Design Pattern
+
 ## Run This Project
 ```bash
 java -jar target/builder-design-pattern-1.0-SNAPSHOT.jar
