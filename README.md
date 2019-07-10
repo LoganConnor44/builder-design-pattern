@@ -2,7 +2,7 @@
 
 ## What Problem Does This Pattern Solve?
 
-The problem that a developer can encounter is when he/she is attempting to create an object but needs to define different representations of the object. Often, a developer may create a constructor for every possible combination of an object. This is known as [Telescoping Constructors](#Telescoping-Constructors) and is a defined anti-pattern.
+A problem that a developer can encounter is when he/she is attempting to create an object but needs to define different representations of the object. Often, a developer may create a constructor for every possible combination of an object. This is known as [Telescoping Constructors](#Telescoping-Constructors) and is a defined anti-pattern.
 
 ## How Can I Identify An Appropriate Time To Use This Pattern?
 
@@ -20,7 +20,7 @@ public class Hero {
 }
 ```
 
-## What Does This Look Like In Code?
+## What Does This Pattern Look Like In Code?
 
 ```java
 public final class Hero {
@@ -113,6 +113,8 @@ mage.setHairColor(HairColor.BLACK);
 mage.setWeapon(Weapon.DAGGER);
 ```
 
+#### Benefits Over Using Setters
+
 1. Depending on the class, it may not be able to be instantiated by an **empty** constructor.
 2. Forces the developer to know all the details of the object they are creating before instantiation.
 3. Developers can easily follow this logic because the Builder design pattern is standard among software development.
@@ -123,7 +125,7 @@ mage.setWeapon(Weapon.DAGGER);
 
 The lines of code that a developer needs to write is essentially doubled. The target class is written and an almost double is written for the target class's builder.
 
-## Run This Project
+## How Do I Run This Project?
 ```bash
 java -jar target/builder-design-pattern-1.0-SNAPSHOT.jar
 ```
@@ -143,7 +145,7 @@ Telescoping Constructors is an anti-pattern where a class has multiple construct
 
 The main issue with this anti-pattern is **maintainability**.
 
-If there are only a few fields in the class then is anti-pattern isn't a huge problem, but the issue begins when a class has more than two or three fields. Although keep in mind, a class with eight properties will result in 254 different constructors for every different possible combination of fields that may be instantiated at one time.
+If there are only a few fields in the class then this anti-pattern isn't a huge problem, but the issue begins when a class has more than two or three fields. Although keep in mind, a class with **only eight** properties will result in **254 different constructors** for every different possible combination of fields that may be instantiated at one time.
 
 #### What Does This Look Like In Code?
 
